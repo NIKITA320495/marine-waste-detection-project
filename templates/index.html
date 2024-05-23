@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ai-wastegaurd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&family=Varela&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<div class="title-container">
+  <div class="project-title">
+    <h1>AI-WasteGuard</h1>
+    <h6> Deep Learning for Water Body Waste Detection and Classification</h6>
+    <!-- Hidden file input element -->
+    <button class="button-container" id="try">
+      <span>Try our model</span>
+      <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+        <path
+          d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+          fill="white"></path>
+      </svg>
+    </button>
+    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+  </div>
+</div>
+<div class="body-container">
+  <div class="project-overview">
+    <h3 class="project-overview-title">Project Overview</h3>
+    <div class="project-overview-content">
+      <p>The objective of the AI-WasteGuard project is to utilize artificial intelligence and machine learning to
+        address the pervasive problem of waste pollution in water bodies. By employing advanced image classification
+        techniques, the project aims to autonomously detect and classify various types of waste materials present in
+        rivers, lakes, and oceans. This proactive approach will provide environmental authorities with real-time
+        insights into water quality, enabling swift and targeted interventions to mitigate the impact of pollution on
+        aquatic ecosystems and human health.</p>
+    </div>
+  </div>
+  <div class="about-our-project">
+    <h3 class="about-our-project-title">About Our Project</h3>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width slides/quotes -->
+      <div class="mySlides">
+        <p class="author">Forward-Looking Sonar Integration</p>
+        <p>The application will integrate with forward-looking sonar cameras installed on ships to receive real-time
+          images of underwater environments. These images will serve as input for the detection algorithms.To ensure
+          applicability in diverse environments, the project will exclusively utilize public datasets for
+          training the AI models.</p>
+      </div>
+      <div class="mySlides">
+        <p class="author">AI-Based Object Detection</p>
+        <p>Utilizing AI algorithms, particularly deep learning techniques, the application will analyze sonar images
+          to detect various objects, including marine waste and obstructions. The AI models will be trained on public
+          datasets to ensure adaptability to diverse marine environments.</p>
+      </div>
+      <div class="mySlides">
+        <p class="author">Real-Time Processing</p>
+        <p>Real-time processing harnesses advanced algorithms to swiftly analyze underwater surroundings, empowering
+          timely intervention for the mitigation of environmental threats like waste accumulation or obstructive
+          materials, thereby safeguarding marine ecosystems.</p>
+      </div>
+      <!-- Next/prev buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="about-our-model">
+      <h3 style="margin-top: 20px;">About our model</h3>
+      <div class="images-container">
+        <div class="image">
+          <h5><b>Data details</b></h5>
+          <img src="../images/labels.jpg" class="labels" style="height: 300px;">
+          <p>This summary provides insights into the frequencies and labels present within the dataset. By
+            analyzing the distribution of labels, we gain a better understanding of the class imbalance and potential
+            biases present in the data. </p>
+        </div>
+        <div class="image">
+          <h5><b>Precision-recall curve</b></h5>
+          <img src="../images/PR_curve.png" class="prcurve" style="height: 300px;">
+          <p> Utilizing the YOLOv8n model as our foundation, we dedicated extensive effort to training and fine-tuning
+            parameters, resulting in a significant enhancement of precision within our model's predictions. Notably,
+            some of these refined outcomes are already prominently displayed, serving as tangible evidence of the
+            efficacy and reliability of our methodology.</p>
+        </div>
+        <div class="image">
+          <h5><b>Validation results</b></h5>
+          <img src="../images/val_batch2_pred.jpg" class="valimg" style="height: 300px;"">
+          <p>These refined outcomes, prominently displayed, provide tangible evidence of the model's capability to accurately identify and classify objects. Such demonstrable success underscores the robustness and efficacy of our approach, instilling confidence in the model's performance and its potential for real-world applications. </p>
+        </div>
+      </div>
+    </div>
+    <div class=" meet-our-team">
+          <h3 class="meet-our-team-title">Meet Our Team</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                  <img src="../images/ritwick1.jpg" alt="Williamson">
+                  <div class="over-layer">
+                    <div class="team-content">
+                      <h3 class="title">Ritwick Johari</h3>
+                      <span class="post">2nd year BTech AI-DS</span>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis
+                        eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                  <img src="../images/manya1.jpg" alt="Kristiana">
+                  <div class="over-layer">
+                    <div class="team-content">
+                      <h3 class="title">Manya Joshi</h3>
+                      <span class="post">2nd year BTech AI-DS</span>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis
+                        eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                  <img src="../images/nikku2.jpg" alt="John">
+                  <div class="over-layer">
+                    <div class="team-content">
+                      <h3 class="title">Nikita</h3>
+                      <span class="post">2nd year BTech AI-DS</span>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis
+                        eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                  <img src="../images/piyush.jpg" alt="Emily">
+                  <div class="over-layer">
+                    <div class="team-content">
+                      <h3 class="title">Piyush</h3>
+                      <span class="post">2nd year BTech AI-DS</span>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam debitis
+                        eligendi excepturi facere laudantium nulla sint sit ut voluptatibus.</p>
+                    </div>
+                  </div>
+                  <ul class="social-links">
+                    <li><a href="#" class="fab fa-twitter"></a></li>
+                    <li><a href="#" class="fab fa-linkedin"></a></li>
+                    <li><a href="#" class="fab fa-facebook"></a></li>
+                    <li><a href="#" class="fab fa-google-plus"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../static/script.js"></script>
+  </body>
+
+</html>
